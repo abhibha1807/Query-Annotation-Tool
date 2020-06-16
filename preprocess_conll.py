@@ -62,7 +62,6 @@ def transform_to_dataset(tagged_sentences):
 # get dictionary mapping of word and count
 file1 = open('/Users/abhibhagupta/Desktop/TCS/version_control_TCS_POS_exploration/datasets/conll_dataset_pos/pos.train.txt', 'r') 
 Lines = file1.readlines() 
-#print(type(Lines))
 l=[]
 t=[]
 tagged_sentences=[]
@@ -74,9 +73,6 @@ for i in range(len(Lines)):
 	else:
 		tagged_sentences.append(t)
 		t=[]
-# print(dataset[0])
-# print(len(dataset))
-
 
 X, Y = [], []
 
@@ -128,7 +124,7 @@ def main():
 	model = compose.Pipeline(
       ('preprocess', preprocess),
       ('preprocess1', preprocess1),
-      ('tree', DecisionTreeClassifier(patience=10,confidence=1e-2,criterion='entropy',max_depth=100,min_child_samples=1))
+      ('tree', DecisionTreeClassifier(patience=100,confidence=1e-2,criterion='entropy',max_depth=20,min_child_samples=2))
       )
 
 	# print(type(model))
@@ -145,49 +141,3 @@ def main():
 	
 if __name__ == '__main__':
 	main()
-
-
-# results (first 10k instances)
-# [1,000] F1: 0.107107
-# [2,000] F1: 0.122561
-# [3,000] F1: 0.128376
-# [4,000] F1: 0.126532
-# [5,000] F1: 0.125025
-# [6,000] F1: 0.127188
-# [7,000] F1: 0.126304
-# [8,000] F1: 0.126891
-# [9,000] F1: 0.123569
-# [10,000] F1: 0.123712
-
-# results (first 10k instances (delay=2))
-# [1,000] F1: 0.113226
-# [2,000] F1: 0.127127
-# [3,000] F1: 0.131421
-# [4,000] F1: 0.128814
-# [5,000] F1: 0.126851
-# [6,000] F1: 0.12871
-# [7,000] F1: 0.127608
-# [8,000] F1: 0.128032
-# [9,000] F1: 0.124583
-# [10,000] F1: 0.124625
-# F1: 0.124625
-
-
-# results (whole dataset)
-# [10,000] F1: 0.123712
-# [20,000] F1: 0.126456
-# [30,000] F1: 0.127571
-# [40,000] F1: 0.128828
-# [50,000] F1: 0.134103
-# [60,000] F1: 0.137902
-# [70,000] F1: 0.142802
-# [80,000] F1: 0.148102
-# [90,000] F1: 0.153324
-# [100,000] F1: 0.158822
-# F1: 0.159305
-
-# results whole dataset conll
-#F1: 0.220167
-
-# results combined
-# almost same as above
