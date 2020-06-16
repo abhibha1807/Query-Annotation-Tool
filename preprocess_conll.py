@@ -51,7 +51,7 @@ def transform_to_dataset(tagged_sentences):
 
 
     X=X[0:10000]
-    print(set(Y))
+    #print(set(Y))
 
     X_y=[]
     for i in range(len(X)):
@@ -136,7 +136,7 @@ def main():
 	# 	model = model.fit_one(x, y)
 	# print(metric)
 
-	print(model_selection.progressive_val_score(X_y=X_y, model=model, metric=metric,print_every=10000))	
+	print(model_selection.progressive_val_score(X_y=X_y, model=model, metric=metric,print_every=100))	
 
 	
 if __name__ == '__main__':
