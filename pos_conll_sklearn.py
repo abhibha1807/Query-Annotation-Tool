@@ -16,7 +16,6 @@ import sklearn
 from sklearn.metrics import classification_report
 file1 = open('/Users/abhibhagupta/Desktop/TCS/version_control_TCS_POS_exploration/datasets/conll_dataset_pos/pos.train.txt', 'r') 
 Lines = file1.readlines() 
-#print(type(Lines))
 l=[]
 t=[]
 tagged_sentences=[]
@@ -28,10 +27,7 @@ for i in range(len(Lines)):
     else:
         tagged_sentences.append(t)
         t=[]
-# print(dataset[0])
-# print(len(dataset))
-
-
+        
 # create features 
 def features(sentence, index):
     """ sentence: [w1, w2, ...], index: the index of the word """
@@ -62,8 +58,8 @@ cutoff = int(.75 * len(tagged_sentences))
 training_sentences = tagged_sentences[:cutoff]
 test_sentences = tagged_sentences[cutoff:]
  
-print (len(training_sentences) )  # 2935
-print (len(test_sentences)   )      # 979
+print (len(training_sentences) ) 
+print (len(test_sentences)   )     
  
 def transform_to_dataset(tagged_sentences):
     X, y = [], []
@@ -88,7 +84,7 @@ clf = Pipeline([
 ])
 
 # print(dir(clf.score))
-clf.fit(X[:10000], y[:10000])   # Use only the first 10K samples if you're running it multiple times. It takes a fair bit :)
+clf.fit(X[:10000], y[:10000])   
 
 print ('Training completed')
  
