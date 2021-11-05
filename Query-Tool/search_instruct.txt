@@ -1,0 +1,33 @@
+Steps to follow:
+1)Type your query in the search box.
+2)Click on the Query button to fire your query
+3)Use the Clear button to clear the text box and initialise the captured entities once again.
+
+Query Formats:
+1)Boolean Queries: 
+- steel/stainless steel/etc.
+- using|by sand blasting|mechanical grinding
+- stainless|carbon steel 
+
+2)Field Queries:
+- word=steel/stainless steel 
+- entity=MOLECULES/QUANTITY/PROCESS/ACTIONS/CONDITIONS 
+- tag=VBZ/NN (any POS tag) (matches words with the defined POS tags)
+- lemma=coating (matches words whose lemma is defined in this case 'coating')
+- entity=MOLECULES entity=PROCESS 
+- word=using|word=by word=sand blasting|word=mechanical grinding ()
+
+
+3)Capture Groups:>
+- <Var1>:<any Field query> <Var2>:<any Field query>
+- Ex: Ingredient:<any Field query> Substrate:<any Field query> 
+
+
+4)Sequential Queries:
+- <any Boolean/Field/Capture groups>, <any Boolean/Field/Capture groups>
+- Note: only two parts supported 
+
+4)Click on export to export your results. 
+
+
+

@@ -1,0 +1,5 @@
+Import File: This button imports files one at a time for annotation purposes.
+Format:The file should be a text file (.txt) with the data in the form of a dictionary. '{field name1: text, field name2: text,...}'
+Import Folder:This button imports a folder/directory consisting of text files. It'll be used to perform queries using the query tool.
+Format:
+The folder should contain text files with extension as (.txt).Each text file should be the format mentioned above.

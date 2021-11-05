@@ -1,0 +1,15 @@
+Steps to follow:
+1)Import a 'file' from the import file section.
+2)Select the desired section name from the dropdown above.
+3)Write  your query in the query box.(_signifies 'space')
+
+Format:
+<Entity name>:<query>_<Entity name>:<query>...
+Entity names defined in the enitity column will be the accepted names.
+4)Choose you preferred mode i.e related entity tagging or entity tagging by selecting the appropraite radio button.
+5)Click 'Query'
+6) To annotate select the text and press the corresponding 'key' on the keyboard.The key names have been defined beside the entity names.
+7) To remove annotations select the text again and press 'X' on the keyboard.
+8) In event of a wrong key press, one can Undo(Ctrl-Z/Cmd-Z) and the text before comes back
+9) To restart annotation click 'Clear'
+7)To export your annotations click the 'Export' button above. If the mode is 'entity tagging' then the filename will be '<Entity name>.csv'.If the mode is 'related entity tagging' then provide a suitable name while saving.'
